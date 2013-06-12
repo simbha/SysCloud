@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+.login {
+	position: absolute;
+	top: 35%;
+	left: -500px;
+	-webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+}
+
+.title {
+	position: relative;
+	top: -250px;
+	left: 140px;
+}
+
+.title span {
+	font-weight: bold;
+	font-size: 48px;
+	color: white;
+	text-shadow: 2px 0 0 black;
+}
+
+.loginform {
+	position: relative;
+	top: -230px;
+	left: 50px;
+}
+
+.loginform span {
+	width: 5em;
+	display: inline-block;
+	color: white;
+	font-weight: normal;
+	text-shadow: 1px 0 0 black;
+}
+
+.loginform input {
+	margin-left: 1em;
+}
+
+.loginform #go {
+	padding: 5px;
+	border-radius: 30px;
+	font-size: 24px;
+}

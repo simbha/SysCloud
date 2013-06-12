@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset="UTF-8">
+<title>SysCloud</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "login/css/login-style.css" %}"/>
+</head>
+<body>
+<div class="login">
+	<img class="bg" alt="bg" src="{% static "login/images/cloud.png" %}" />
+	<div class="title">
+		<span>SysCloud</span>
+	</div>
+	<form class="loginform">
+		<span>Email ID</span>
+		<input id="email" type="email" />
+		<br>
+		<span>Password</span>
+		<input id="password" type="password" />
+		<input id="go" type="submit" value="Go!" />
+	</form>
+</div>
+</body>
+</html>
