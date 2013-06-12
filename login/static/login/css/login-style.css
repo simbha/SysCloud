@@ -11,9 +11,22 @@
     transition: all 3s ease;
 }
 
+.register {
+	position: relative;
+	top: -240px;
+	left: 400px;
+	color: #D9E6FD;
+	text-decoration: underline;
+}
+
+.register:HOVER {
+	color: white;
+	cursor: pointer;
+}
+
 .title {
 	position: relative;
-	top: -250px;
+	top: -270px;
 	left: 140px;
 }
 
@@ -26,7 +39,7 @@
 
 .loginform {
 	position: relative;
-	top: -230px;
+	top: -250px;
 	left: 50px;
 }
 
@@ -46,4 +59,12 @@
 	padding: 5px;
 	border-radius: 30px;
 	font-size: 24px;
+}
+
+#invalid {
+	position: relative;
+	top: -250px;
+	left: 80px;
+	color: white;
+	font-size: small;
 }
