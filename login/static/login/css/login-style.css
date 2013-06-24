@@ -1,5 +1,11 @@
 @CHARSET "UTF-8";
 
+#loading {
+	position: absolute;
+	top: 40%;
+	left: 45%;
+}
+
 .login {
 	position: absolute;
 	top: 35%;
