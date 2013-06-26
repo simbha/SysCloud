@@ -12,3 +12,9 @@ class RegisteredUsers(models.Model):
     firstname = models.CharField(max_length=100)
     lastname = models.CharField(max_length=100)
     phone = models.CharField(max_length=13, default=None)
+    
+class Session(models.Model):
+    def get_session_key(self):
+        return self.session_key
+    user = models.ForeignKey(RegisteredUsers)
+    session_key = models.CharField(max_length=20)
