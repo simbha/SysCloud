@@ -29,3 +29,4 @@ $(window).resize(function(e) {
 	$(".board .files td div img").css("height", tdHeight / 2);
 	$(".board .files td div label").css("font-size", 0.1 * tdHeight);
 });
+

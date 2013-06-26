@@ -1,6 +1,13 @@
 from django.db import models
+from login.models import RegisteredUsers
 
 # Create your models here.
+
+class UserAccessToken(models.Model):
+    def get_access_token(self):
+        return self.access_token
+    user = models.ForeignKey(RegisteredUsers)
+    access_token = models.CharField(max_length=100)
 
 class File(models.Model):
     user_id = models.CharField(max_length=100)

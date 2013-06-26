@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html>
+{% load staticfiles %}
 <head>
 <meta charset="UTF-8">
 <title>SysCloud- FileBoard</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<!-- <script type="text/javascript" src="{% static "fileboard/js/jquery.ba-resize.min.js" %}"></script>-->
+<script type="text/javascript" src="{% static "fileboard/js/script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "fileboard/css/fileboard-style.css" %}"/>
 </head>
 <body>
-
+<div class="header">
+		<span class="list"><img alt="back" src="{% static "fileboard/images/arrow-left1.png" %}" />Home</span>
+</div>
+<div class="menu"></div>
+<div class="board">
+<div class="files">
+	<table>
+		<tr>
+			<td>
+				<div>
+					<img alt="folder" src="{% static "fileboard/images/folder.png" %}" />
+					<br>
+					<label>Documents</label>
+				</div>
+			</td>
+			<td>
+				<div>
+					<img alt="pictures" src="{% static "fileboard/images/picture.png" %}" />
+					<br>
+					<label>Pictures</label>
+				</div>
+			</td>
+			<td>
+				<div>
+					<img alt="music" src="{% static "fileboard/images/music.png" %}" />
+					<br>
+					<label>Music</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div>
+					<img alt="videos" src="{% static "fileboard/images/video.png" %}" />
+					<br>
+					<label>Videos</label>
+				</div>
+			</td>
+			<td>
+				<div>
+					<img alt="file" src="{% static "fileboard/images/file.png" %}" />
+					<br>
+					<label>temp.dat</label>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+</div>
+<div class="footer"></div>
 </body>
 </html>
