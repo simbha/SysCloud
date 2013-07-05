@@ -4,5 +4,5 @@ from login import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^authorise/$', views.authorise, name='authorise'),
+    url(r'^authorise$', views.signin, name='login'),
 )
