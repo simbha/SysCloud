@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset="UTF-8">
+<title>Syscloud- Fileboard: New Google Drive Account</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "fileboard/js/accounts/new-google-drive-script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "fileboard/css/accounts/new-google-drive-style.css" %}"/>
+</head>
+<body>
+	<img alt="google-drive" src="{% static "fileboard/images/gdrive.png" %}">
+	<div id="allow-gdrive" class="access">
+		<label>Your GMail ID:</label> 
+		<br /> 
+		<input class="acc-email" type="text" /> 
+		<br />
+		<br /> 
+		<span>(Please make sure you login with the above e-mail address during authorization)</span>
+		<br /> 
+		<input class="acc-button" type="button"	value="Allow Access" disabled="disabled" /> 
+		<br />
+		<br />
+		<label>Enter Verification Code:</label> 
+		<br />
+		<input id="code" type="text" />
+		<br />
+		<input id="gDriveCredentials" type="button" value="Get Credentials" disabled="disabled" /> 
+		<br /> 
+		<span class="status"></span>
+	</div>
+</body>
+</html>
