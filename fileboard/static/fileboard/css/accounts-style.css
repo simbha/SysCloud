@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table tr {
+	width: 100%;
+}
+
+table tr td {
+	padding: 0;
+}
+
+table tr td div{
+	position: relative;
+}
+
+table tr td div input {
+	padding: 1% 2% 1% 2%;
+}
+
+#dropbox {
+	background-color: #0036A1;
+}
+
+#box {
+	background-color:#008C69;
+}
+
+#google-drive {
+	background-color: #7711C4;
+}
+
+#amazons3 {
+	background-color: #B00954;
+}

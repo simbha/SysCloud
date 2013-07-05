@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset="UTF-8">
+<title>SysCloud - Fileboard: Configure Accounts</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "fileboard/js/accounts-script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "fileboard/css/accounts-style.css" %}"/>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<div id="box" class="palette">
+					<img alt="box" src="{% static "fileboard/images/box.png" %}">
+					<br/>
+					<input class="create" type="button" value="Add New Account" />
+					<br/>
+					<input class="manage" type="button" value="Manage Existing Accounts" />	
+				</div>
+			</td>
+			<td>
+				<div id="dropbox" class="palette">
+					<img alt="dropbox" src="{% static "fileboard/images/dropbox-logo.png" %}">
+					<br/>
+					<input class="create" type="button" value="Add New Account" />
+					<br/>
+					<input class="manage" type="button" value="Manage Existing Accounts" />
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="google-drive" class="palette">
+					<img alt="google-drive" src="{% static "fileboard/images/gdrive.png" %}">
+					<br/>
+					<input class="create" type="button" value="Add New Account" />
+					<br/>
+					<input class="manage" type="button" value="Manage Existing Accounts" />
+				</div>
+			</td>
+			<td>
+				<div id="amazons3" class="palette">
+					<img alt="amazons3" src="{% static "fileboard/images/amazons3.png" %}">
+					<br/>
+					<input class="create" type="button" value="Add New Account" />
+					<br/>
+					<input class="manage" type="button" value="Manage Existing Accounts" />
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
