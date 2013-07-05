@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset="UTF-8">
+<title>Syscloud- Fileboard: New Dropbox Account</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "fileboard/js/accounts/new-dropbox-script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "fileboard/css/accounts/new-dropbox-style.css" %}"/>
+</head>
+<body>
+	<img alt="dropbox" src="{% static "fileboard/images/dropbox-logo.png" %}">
+	<div id="allow-dropbox" class="access">
+		<label>Your Dropbox Email ID:</label> 
+		<br /> 
+		<input class="acc-email" type="text" /> 
+		<br />
+		<br /> 
+		<span>(Please make sure you login with the above e-mail address during authorization)</span>
+		<br /> 
+		<input class="acc-button" type="button"	value="Allow Access" disabled="disabled" /> 
+		<br /> 
+		<input id="dropboxAccessToken" type="button" value="Get Access Token" disabled="disabled" /> 
+		<br /> 
+		<span class="status"></span>
+	</div>
+</body>
+</html>

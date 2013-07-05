@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #0036A1;
+}
+
+img {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+}
+
+.access {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	padding: 2%;
+	display: inline-block;
+	text-align: center;
+	border-radius: 10px;
+	border-right: 5px solid #B5B5B5;
+	border-bottom: 5px solid #8C8C8C;
+	background: -webkit-linear-gradient(#F2F2F2, #B5B5B5);
+	background: -moz-linear-gradient(#F2F2F2, #B5B5B5);
+	background: -ms-linear-gradient(#F2F2F2, #B5B5B5);
+	background: -o-linear-gradient(#F2F2F2, #B5B5B5);
+	background: linear-gradient(#F2F2F2, #B5B5B5);
+}
+
+.access input {
+	padding: 1% 2% 1% 2%;
+}
