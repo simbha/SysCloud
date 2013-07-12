@@ -40,15 +40,24 @@ $(function() {
 		if(input != "" && regex.test(input)) {
 			$.post("/fileboard/accounts/exists", {account: $(".acc-email").val(), storageType: "dropbox"}, function(resp) {
 				if(resp == "False")
-					$(".access input[type='button']").prop("disabled",false);
+					$(".access .acc-button").prop("disabled",false);
 				else {
-					$(".access input[type='button']").prop("disabled",true);
+					$(".access .acc-button").prop("disabled",true);
 					$("#allow-dropbox .status").css("color","red");
 					$("#allow-dropbox .status").html("An account with this e-mail address already exists");
 				}
 			});
 		} else {
-			$(".access input[type='button']").prop("disabled",true);
+			$(".access .acc-button").prop("disabled",true);
+		}
+	});
+	
+	$("#code").keyup(function() {
+		var input = $(this).val();
+		if(input != ""){
+			$(".access #dropboxAccessToken").prop("disabled",false);
+		} else {
+			$(".access #dropboxAccessToken").prop("disabled",true);
 		}
 	});
 });
@@ -62,18 +71,21 @@ $(function() {
 	});
 	
 	$("#dropboxAccessToken").click(function() {
-		$.post("/fileboard/getAccess/dropbox", {account: $(".acc-email").val()}, function(resp) {
-			if(resp == "True") {
-				$("#allow-dropbox .status").css("color","green");
-				$("#allow-dropbox .status").html("Your Dropbox account has been successfully set up!");
-				if($("#goto-fileboard").prop("disabled")) {
-					$("#goto-fileboard").prop("disabled",false);
+		var code = $("#code").val();
+		if(code == "") {
+			$("#allow-dropbox .status").css("color","red");
+			$("#allow-dropbox .status").html("Please enter a valid authorization code");
+		} else {
+			$.post("/fileboard/getAccess/dropbox", {account: $(".acc-email").val(), code: $("#code").val()}, function(resp) {
+				if(resp == "True") {
+					$("#allow-dropbox .status").css("color","green");
+					$("#allow-dropbox .status").html("Your Dropbox account has been successfully set up!");
+				} else if(resp == "False") {
+					$("#allow-dropbox .status").css("color","red");
+					$("#allow-dropbox .status").html("Please allow access to Syscloud and try again");
 				}
-			} else if(resp == "False") {
-				$("#allow-dropbox .status").css("color","red");
-				$("#allow-dropbox .status").html("Please allow access to Syscloud and try again");
-			}
-		});
+			});
+		}
 	});
 });
 

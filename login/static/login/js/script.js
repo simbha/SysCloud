@@ -17,7 +17,7 @@ $.ajaxSetup({
 function beginSession() {
 	setTimeout(function() {
 		$.post("/fileboard/permissions", function(resp) {
-			var permitted = resp;
+			var permitted = resp
 			if(permitted == 'True') { //if access has been allowed to one or more cloud accounts
 				window.location.replace("/fileboard");
 			} else {

@@ -10,25 +10,12 @@ class Storage(models.Model):
 class UserAccounts(models.Model):
     account = models.CharField(max_length=100)
     storage_type = models.ForeignKey(Storage)
-    user = models.ForeignKey(User) 
-
-class UserRequestToken(models.Model):
-    def get_request_token_key(self):
-        return self.request_token_key
-    def get_request_token_secret(self):
-        return self.request_token_secret
-    user_account = models.ForeignKey(UserAccounts)
-    request_token_key = models.CharField(max_length=100)
-    request_token_secret = models.CharField(max_length=100)
+    user = models.ForeignKey(User)
+    access = models.BooleanField()
 
 class UserAccessToken(models.Model):
-    def get_access_token_key(self):
-        return self.access_token_key
-    def get_access_token_secret(self):
-        return self.access_token_secret
     user_account = models.ForeignKey(UserAccounts)
-    access_token_key = models.CharField(max_length=100)
-    access_token_secret = models.CharField(max_length=100)
+    access_token = models.CharField(max_length=100)
     
 class CredentialsModel(models.Model):
     id = models.ForeignKey(UserAccounts, primary_key=True)
