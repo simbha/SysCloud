@@ -37,14 +37,9 @@ def gDriveCredentials(code, user_account):
         credentials = flow.step2_exchange(code)
         storage = Storage(CredentialsModel, 'id', user_account, 'credentials')
         storage.put(credentials)
+        user_account.access = True
+        user_account.save()
         return HttpResponse(True)
     except FlowExchangeError:
         return HttpResponse(False)
     
-def exists(user_account):
-    storage = Storage(CredentialsModel, 'id', user_account, 'credentials')
-    credentials = storage.get()
-    if credentials is not None:
-        return HttpResponse(True)
-    else:
-        return HttpResponse(False)

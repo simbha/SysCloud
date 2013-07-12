@@ -8,8 +8,10 @@ urlpatterns = patterns('',
     url(r'^accounts/exists$', views.exists, name='accountExists'),
     url(r'^accounts/(?P<account_type>[a-z\-]+)/create$', views.newAccount, name='newAccount'),
     url(r'^accounts/(?P<account_type>[a-z\-]+)/manage$', views.manageAccount, name='manageAccount'),
+    url(r'^accounts/(?P<account_type>[a-z\-]+)/delete$', views.deleteAccount, name='deleteAccount'),
     url(r'^getURL/google-drive$', views.getGDriveURL, name='gDriveURL'),
     url(r'^getAccess/google-drive$', views.getGDriveCredentials, name='gDriveCredentials'),
     url(r'^getURL/dropbox$', views.getDropboxURL, name='dropboxURL'),
-    url(r'^getAccess/dropbox$', views.getDropboxAccessToken, name='dropboxAccessToken')
+    url(r'^getAccess/dropbox$', views.getDropboxAccessToken, name='dropboxAccessToken'),
+    url(r'^removeAccess/dropbox$', views.destroyDropboxAccessToken, name='destroyAccessToken')
 )

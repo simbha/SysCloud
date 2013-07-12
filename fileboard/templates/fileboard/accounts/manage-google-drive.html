@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset="UTF-8">
+<title>Syscloud- Fileboard: Manage Dropbox Accounts</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "fileboard/js/accounts/sizing.js" %}"></script>
+<script type="text/javascript" src="{% static "fileboard/js/accounts/manage-google-drive-script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "fileboard/css/accounts/manage-style.css" %}"/>
+</head>
+<body style="background-color: #7711C4;">
+	<img alt="dropbox" src="{% static "fileboard/images/gdrive.png" %}">
+	<div class="manage-accounts">
+		<div class="account-list">
+		{% if user_account_list %}
+			<table>
+				<tr>
+					<th></th>
+					<th><label>Your Google Drive Account list:</label></th>
+					<th><label>Access Allowed:</label></th>
+				</tr>
+			{% for user_account in user_account_list %}
+				<tr>
+					<td><input id="{{ user_account.id }}" type="radio" /></td>
+					<td><label for="{{ user_account.id }}">{{ user_account.account }}</label></td>
+					<td><label>{{ user_account.access }}</label></td>
+				</tr>
+			{% endfor %}
+			</table>
+		{% else %}
+			<p>No accounts have been configured for Google Drive</p>
+			<span>To configure a new account, go back to the account palette and click on Add New Account for Google Drive</span>
+		{% endif %}
+		</div>
+		<table>
+			<tr>
+				<td><input id="gDriveCredentials" type="button" value="Get Credentials" disabled="disabled" /></td>
+				<td>
+					<input id="disallow" type="button" value="Disallow Access" disabled="disabled" />
+					<input id="delete" type="button" value="Delete Account" disabled="disabled" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

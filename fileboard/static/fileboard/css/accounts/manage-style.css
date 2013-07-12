@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+
+img {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+}
+
+.manage-accounts {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	padding: 2%;
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	border-radius: 10px;
+	border-right: 5px solid #B5B5B5;
+	border-bottom: 5px solid #8C8C8C;
+	background: -webkit-linear-gradient(#F2F2F2, #B5B5B5);
+	background: -moz-linear-gradient(#F2F2F2, #B5B5B5);
+	background: -ms-linear-gradient(#F2F2F2, #B5B5B5);
+	background: -o-linear-gradient(#F2F2F2, #B5B5B5);
+	background: linear-gradient(#F2F2F2, #B5B5B5);
+}
+
+.manage-accounts input {
+	padding: 1% 2% 1% 2%;
+}
+
+.manage-accounts table {
+	width: 100%;
+}
+
+.account-list table {
+	background: #F8F8F8;
+	border-left: 4px solid #E7E7E7;
+	border-top: 4px solid #D8D8D8;
+	border-right: 4px solid #E7E7E7;
+	border-bottom: 4px solid #C4C4C4;
+	list-style: none;
+	margin-bottom: 2%;
+}
+
+.account-list table tr:FIRST-CHILD {
+	background: #C4C4C4;
+}
+
+.account-list table tr td {
+	padding: 1% 2% 1% 2%;
+}
+
+.account-list label.True {
+	color: green;
+}
+
+.account-list label.False {
+	color: red;
+}
+
