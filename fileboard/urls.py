@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 
 from fileboard import views
 urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.getUserFileboard, name='index'),
     url(r'^permissions$', views.permission, name='permission'),
     url(r'^accounts$', views.accounts, name='accounts'),
     url(r'^accounts/exists$', views.exists, name='accountExists'),
@@ -13,5 +13,9 @@ urlpatterns = patterns('',
     url(r'^getAccess/google-drive$', views.getGDriveCredentials, name='gDriveCredentials'),
     url(r'^getURL/dropbox$', views.getDropboxURL, name='dropboxURL'),
     url(r'^getAccess/dropbox$', views.getDropboxAccessToken, name='dropboxAccessToken'),
-    url(r'^removeAccess/dropbox$', views.destroyDropboxAccessToken, name='destroyAccessToken')
+    url(r'^removeAccess/dropbox$', views.destroyDropboxAccessToken, name='destroyAccessToken'),
+    url(r'^getURL/skydrive$', views.getSkyDriveURL, name='skydriveURL'),
+    url(r'^getAccess/skydrive$', views.getSkyDriveAccessToken, name='skydriveAccessToken'),
+    url(r'^removeAccess/skydrive$', views.destroySkyDriveAccessToken, name='destroyAccessToken'),
+    url(r'^files$', views.getUserFiles, name='userFileboard')
 )

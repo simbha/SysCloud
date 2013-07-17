@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% load fileboard_extras %}
+<div class="files">
+{% if file_list %}
+	<table>
+		<tr>
+		{% for file in file_list %}
+			{% if forloop.counter0|get_mod_3 == 0 %}
+				</tr><tr>
+				<td>
+					<div id="{{ file.uid }}">
+						<img alt="{{ file.uid }}" src="{% static file.image %}" />
+						<br>
+						<label>{{ file.name }}</label>
+					</div>
+				</td>
+			{% else %}
+				<td>
+					<div id="{{ file.uid }}">
+						<img alt="{{ file.uid }}" src="{% static file.image %}" />
+						<br>
+						<label>{{ file.name }}</label>
+					</div>
+				</td>
+			{% endif %}
+		{% endfor %}
+		</tr>
+	</table>
+{% endif %}
+</div>

@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load fileboard_extras %}
+<div class="files">
+{% if account_list %}
+	<table>
+		<tr>
+		{% for account in account_list %}
+			{% if forloop.counter0|get_mod_3 == 0 %}
+				</tr><tr>
+				<td>
+					<div id="{{ account_type }}">
+						<img alt="account" src="{% static "fileboard/images/account1.png" %}" />
+						<br>
+						<label>{{ account.account }}</label>
+					</div>
+				</td>
+			{% else %}
+				<td>
+					<div id="{{ account_type }}">
+						<img alt="account" src="{% static "fileboard/images/account1.png" %}" />
+						<br>
+						<label>{{ account.account }}</label>
+					</div>
+				</td>
+			{% endif %}
+		{% endfor %}
+		</tr>
+	</table>
+{% else %}
+	<span>No Accounts!</span>
+{% endif %}
+</div>
