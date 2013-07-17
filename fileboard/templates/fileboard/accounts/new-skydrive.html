@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset="UTF-8">
+<title>Syscloud- Fileboard: New SkyDrive Account</title>
+<script type="text/javascript" src="{% static "login/js/jquery-1.10.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "login/js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "fileboard/js/accounts/new-skydrive-script.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "fileboard/css/accounts/new-skydrive-style.css" %}"/>
+</head>
+<body>
+	<img alt="skydrive" src="{% static "fileboard/images/skydrive.png" %}">
+	<div id="allow-skydrive" class="access">
+		<label>Your SkyDrive Email ID:</label> 
+		<br /> 
+		<input class="acc-email" type="text" /> 
+		<br />
+		<br /> 
+		<span>(Please make sure you login with the above e-mail address during authorization)</span>
+		<br /> 
+		<input class="acc-button" type="button"	value="Allow Access" disabled="disabled" /> 
+		<br />
+		<br />
+		<label>Enter url:</label> 
+		<br/>
+		<span>(Please make sure you provide last URL after redirect)</span>
+		<br />
+		<input id="code" type="text" />
+		<br />
+		<input id="skydriveAccessToken" type="button" value="Get Access Token" disabled="disabled" /> 
+		<br /> 
+		<span class="status"></span>
+	</div>
+</body>
+</html>

@@ -6,20 +6,55 @@
 	left: 0%;
 	width: 100%;
 	height: 20%;
-	background-color: #2D64B0;
+	background-color: #4E60D6;
+}
+
+.header .user {
+	position: absolute;
+	top: 2%;
+	right: 0;
+	color: white;
+	font-style: Times New Roman;
+}
+
+.header .user a {
+	text-decoration: underline;
+	color: #FFFF15;
+}
+
+.header .user a:HOVER {
+	cursor: pointer;
+	color: #FFFF99;
 }
 
 .header .list {
 	position: absolute;
 	bottom: 0;
-	color: white;
-	font-size: 36px;
-	font-style: Times New Roman;
 }
 
 .header .list img{
 	margin-left: 2em;
 	margin-right: 1.5em;
+}
+
+.header .list a {
+	text-decoration: underline;
+	color: #E8E8E8;
+	font-style: Times New Roman;
+}
+
+.header .list a:last-child {
+	text-decoration: none;
+}
+
+.header .list a:HOVER {
+	color: white;
+	cursor: pointer;
+}
+
+.header .list a:last-child:HOVER {
+	color: #E8E8E8;
+	cursor: default;
 }
 
 .menu {
@@ -28,7 +63,7 @@
 	left: 0%;
 	width: 100%;
 	height: 10%;
-	background-color: #2D64B0;
+	background-color: #4E60D6;
 }
 
 .board {
@@ -37,12 +72,11 @@
 	left: 0%;
 	width: 100%;
 	height: 50%;
-	background-color: #08559C;
+	background-color: #262588;
 }
 
 .board .files {
 	margin: 1%;
-	margin-right: 5%;
 }
 
 .board .files table {
@@ -56,7 +90,6 @@
 
 .board .files table tr td div {
 	position: relative;
-	background-color: #559FFF;
 }
 
 .board .files div img {
@@ -73,11 +106,55 @@
 	font-size: 20px;
 }
 
+.board .files #box {
+	background-color: #008C69;
+}
+
+.board .files #skydrive {
+	background-color: #45A770;
+}
+
+.board .files #dropbox {
+	background-color: #0040BF;
+}
+
+.board .files #google-drive {
+	background-color: #7711C4;
+}
+
+.board .files #amazons3 {
+	background-color: #B00954;
+}
+
+.board .files #box:HOVER {
+	background-color: #33A98C;
+}
+
+.board .files #skydrive:HOVER {
+	background-color: #68B58A;
+}
+
+.board .files #dropbox:HOVER {
+	background-color: #2A5CBF;
+}
+
+.board .files #google-drive:HOVER {
+	background-color: #9C45DF;
+}
+
+.board .files #amazons3:HOVER {
+	background-color: #C93377;
+}
+
+.board .files #a-file {
+	background-color: #559FFF;
+}
+
 .footer {
 	position: absolute;
 	left: 0%;
 	bottom: 0%;
 	width: 100%;
 	height: 20%;
-	background-color: #2D64B0;
+	background-color: #4E60D6;
 }

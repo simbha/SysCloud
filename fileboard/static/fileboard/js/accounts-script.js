@@ -7,6 +7,7 @@ function sizeEle() {
 	$("table tr td div").height(divHeight);
 	var imgWidth = 0.25 * (1/noOfCols) * $(document).width();
 	$("table tr td div img").width(imgWidth);
+	$("table tr td div#skydrive img").width(imgWidth * 1.5);
 	$("table tr td div img").css("margin-left", tdWidth / 2);
 	$("table tr td div img").css("margin-top", 0.2 * divHeight);
 	$("table tr td div input").css("margin-left", 0.1 * tdWidth);
@@ -37,7 +38,7 @@ function hideDropbox() {
 }
 
 function hideBox() {
-	$("#box").animate({
+	$("#skydrive").animate({
 		left: "-=500",
 		top: "-=500"
 	}, 1500);

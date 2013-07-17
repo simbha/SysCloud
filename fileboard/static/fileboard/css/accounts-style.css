@@ -27,11 +27,11 @@ table tr td div input {
 }
 
 #dropbox {
-	background-color: #0036A1;
+	background-color: #0040BF;
 }
 
-#box {
-	background-color:#008C69;
+#skydrive {
+	background-color:#45A770;
 }
 
 #google-drive {
@@ -39,5 +39,9 @@ table tr td div input {
 }
 
 #amazons3 {
-	background-color: #B00954;
+	background-color: #B5125B;
+}
+
+#box {
+	background-color: #B2B00C;
 }
